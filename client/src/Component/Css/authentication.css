@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+}
+.container-1 {
+  background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),url("https://assets.nflxext.com/ffe/siteui/vlv3/c7f07b68-7989-4ff7-a31e-11c17dcc2fea/fcf685b8-3f9f-42d8-9af3-4bb86fa5a3b8/IN-en-20240422-popsignuptwoweeks-perspective_alpha_website_small.jpg") !important;
+  height: 940px;
+  color: white;
+  
+
+}
+.log-in{
+    background-color:rgba(0,0,0,0.6);
+  padding: 20px 60px 40px 60px;
+   
+}
+.heading{
+    margin: 10px  ;
+}
+
+.log-in-container{
+    display: flex;
+    justify-content: center;
+}
+.email::plac
+eholder{
+   
+    color: white;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login-submit{
+    padding: 15px 135px;
+    border-radius: 5px;
+    background-color: #e50914;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  
+}
+.log-in-container input{
+    margin-bottom: 20px;
+}
+.others{
+    text-align: center;
+}
+.sign-in-code{
+    background-color: rgb(56, 52, 53,0.8);
+    padding: 10px;
+    margin: 20px;
+  
+}
+input[type="checkbox"]{
+    transform: scale(1.5);
+}
+label{
+    margin-left: 10px;
+}
+input[type="checkbox"]:checked{
+    color: black;
+}
+.signup-link-label{
+    color: #b3b3b3;
+
+}
+
+.login-footer{
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #b3b3b3 ;
+    margin-top: 50px;
+}
+.login-contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 150px;
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 50px 10px 150px;
+  
+}
+.footer-content ul li{
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
+.login-language {
+    padding: 7px 25px;
+    margin-right: 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px white solid;
+    font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 150px;
+    list-style: none;
+}
+.login-footer-language li{
+    list-style:none;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+/* register */
+
+.navbar-register ul{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: skyblue 1px solid;
+    list-style: none;
+}
+.navbar-register ul .link{
+  margin: 20px 100px 0 0;
+  font-size: 20px;
+}
+.link a{
+    text-decoration: none;
+    color: black;
+}
+
+.register-form{
+    margin-top: 30px;
+}
+
+.login-submit-1{
+    padding: 15px 125px;
+    border-radius: 5px;
+    background-color: #e50914;
+    border: none;
+    font-size: 20px;
+    color: white;
+    width: 335px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 400px;
+  
+}
+
+.register-container{
+   display: grid;
+   justify-content: center;
+   margin-top: 50px;
+   margin-left: 100px;
+
+}
+.register-head{
+    font-size: 40px;
+    width: 550px;
+}
+.register-para{
+    font-size: 20px;
+    width: 380px;
+    margin-top: 30px;
+}
+.email-1::placeholder{
+   
+    color: black;
+    font-size: 15px;
+}
+#name{
+    margin-bottom: 20px;
+}
+.email-1{
+    width: 240px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    text-align: start;
+}   
+
+.reg-footer{
+    padding: 50px;
+    color:#737373 ;
+    margin-top: 50px;
+    background-color: #f3f3f3;
+  
+}
+
+.reg-language {
+    padding: 7px 25px;
+    margin-right: 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 1px white solid;
+    font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+
+.reg-footer-language li{
+    list-style:none;
+}
+.reg-contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 150px;
+}
+
+
+/*forgot password */
+
+.forgot-container{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/login/login-the-crown_2-1500x1000.jpg);
+    height: 100dvh;
+}
+
+.navbar-forgot ul{
+    display: flex;
+    justify-content: space-between;
+   
+    list-style: none;
+}
+.navbar-forgot ul .link{
+  margin: 20px 100px 0 0;
+  font-size: 20px;
+}
+.link a{
+    text-decoration: none;
+    color: white;
+}
+
+.forgot-main-container{
+    background-color:#e8eef1;
+    width: 400px;
+    height: 430px;
+    padding: 20px 0px 20px 40px;
+    transform: scale(110%);
+    margin-top: 30px;
+}
+.forgot-center-container span{
+    display: block;
+   
+}
+.forgot-center-container{
+
+    display: grid;
+    justify-content: center;
+}
+.forgot-head{
+    font-size: 35px;
+    margin-bottom: 30px;
+
+   
+}
+.forgot-para{
+    font-size: 18px;
+    margin: 20px 0px;
+    width: 90%;
+    font-weight: lighter;
+    color: #383b3d;
+}
+input[type="radio"]{
+    transform: scale(2);
+    margin: 10px;
+    border: none;
+}
+.radio-button{
+    margin-left: 30px;
+}
+.forgot-text{
+    padding: 10px 80px;
+}
+.forgot-submit{
+    padding: 10px 125px;
+    margin-top: 30px;
+    background-color: #017cf7;
+    color: white;
+    font-weight: 400;
+    font-size: medium;
+}
+.forgot-final{
+    color:rgb(137, 137, 184);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.forgot-footer{
+    padding: 50px;
+    color:#737373 ;
+    background-color: black;
+    padding-top: 150px;
+    
+  
+}
+
+.forgot-language {
+    padding: 7px 25px;
+    margin-right: 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 1px white solid;
+    font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+
+.forgot-footer-language li{
+    list-style:none;
+}
+.forgot-contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 150px;
+}

@@ -1,0 +1,23 @@
+.nav-side{
+    display: flex;
+}
+.nav-side li{
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 24px;
+    color: #b3b3b3;
+}
+.nav-side .logout{
+   margin-left: 600px;
+}
+.home-container{
+    background-color: black;
+    height: 100dvh;
+}
+.home-logo{
+    justify-self: start;
+   margin: 5px;
+}
+.nav-side li a{
+    color: #b3b3b3;
+}
