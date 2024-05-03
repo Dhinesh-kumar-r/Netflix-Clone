@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "../Css/authentication.css"
 import axios from "axios"
+import ex from '../logo.png';
 
 function Register() {
     const[email,setemail] = useState("");
@@ -29,8 +30,8 @@ function Register() {
         
         <div className="navbar-register">
             <ul>
-                <li> <img src="logo.png" alt="" height="70px" width="150px" class="logo" /></li>
-                <li className='link'><Link to={"/"}>Signin</Link></li>
+                <li> <img src={ex} alt="" height="70px" width="150px" class="logo" /></li>
+                <li className='link'><Link to={"/"} style={{color:"black"}}>Signin</Link></li>
             </ul>
         </div>
 

@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "../Css/authentication.css"
 import axios from 'axios';
+import ex from '../logo.png';
 
 
 function ForgotPassword() {
-    const {email,setemail}=useState();
-    const ForgotPassword=(e)=>{
+    const [email,setemail] =useState();
+
+    const HandleForgotPassword=(e)=>{
         e.preventDefault();
         axios.post("http://localhost:5998/auth/forgot",{email})
         .then((res)=>{
@@ -24,7 +26,8 @@ function ForgotPassword() {
         <div className ="forgot-container">
             <div className="navbar-forgot">
                 <ul>
-                    <li> <img src="logo.png" alt="" height="70px" width="150px" class="logo" /></li>
+                <img src={ex} alt="" height="70px" width="150px" class="logo" />
+
                     <li className='link'><Link to={"/"}>Signin</Link></li>
                 </ul>
             </div>
@@ -44,7 +47,7 @@ function ForgotPassword() {
                             </div>
                     </div>
                     <span className='forgot-para'>We will send you an email with instructions on how to reset your password.</span>
-                    <form onSubmit={ForgotPassword}>
+                    <form onSubmit={HandleForgotPassword}>
                     <input type='text' placeholder='@example.com' className='forgot-text' onChange={(e)=>setemail(e.target.value)}/><br/>
 
                     <input type='submit' value={"Email Me"} className='forgot-submit'></input>

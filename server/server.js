@@ -2,6 +2,8 @@ import express from "express"
 import cors from "cors";
 import dbConnectivity from "./config/db.js";
 import authRouter from "./routes/authRoute.js";
+import cookieParser from "cookie-parser";
+import { Verification } from "./middleware/verification.js";
 
 
 const app = express();
@@ -11,6 +13,8 @@ app.use(cors({
     credentials:true
 }))
 app.use("/auth",authRouter)
+app.use(cookieParser())
+app.use("/verify",Verification,authRouter)
 
 
 

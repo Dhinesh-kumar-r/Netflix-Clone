@@ -57,6 +57,7 @@
 }
 .mail {
   margin-top: 20px;
+  display: flex;
 }
 
 .email {

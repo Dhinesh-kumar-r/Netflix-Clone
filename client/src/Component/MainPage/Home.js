@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import "../Css/home.css"
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 function Home() {
+  const nav = useNavigate();
+
+  axios.defaults.withCredentials = true
+  useEffect(()=>{
+    axios.get("http://localhost:5998/verify/auth")
+    .then((res)=>{
+      if(res.data.status){
+        console.log("Token Alive")
+      }
+      else{
+      nav("/")
+      }
+    })
+  });
+
+  function handleLogout(){
+    axios.get("http://localhost:5998/auth/logout")
+    .then((res=>{
+      if(res.data.status){
+        nav("/")
+      }
+    }))
+  }
+
   return (
     <>
     <div className='home-container'>
@@ -17,7 +42,7 @@ function Home() {
                 <li><Link to={"/"}>Originals</Link></li>
                 <li><Link to={"/"}>Recently Added</Link></li>
                 <li><Link to={"/"}>MyList</Link></li>
-                <li className='logout'><Link to={"/"}>Logout</Link></li>
+                <li className='logout' onClick={handleLogout}>Logout</li>
                
                
             </ul>

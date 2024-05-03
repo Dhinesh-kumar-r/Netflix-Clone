@@ -34,11 +34,14 @@ const Signin =async(req,res)=>{
             res.json({msg:"Please_Register"})
         }
         else{
+            
             const matchPassword = await bcrypt.compare(password,user.password)
             if(!matchPassword){
                 res.json({msg:"incorrect_Password"})
             }
             else{
+                const token = jwt.sign({user:user._id},"secretkey",{expiresIn:"10m"})
+            res.cookie("accessToken",token,{secure:true,sameSite:true,httpOnly:true})
                 res.json({msg:"login_Sucessfully"})
             }
         }
@@ -101,13 +104,14 @@ var transporter = nodemailer.createTransport({
 
 const ResetPassword = async(req,res)=>{
     const {password} = req.body;
-    const{id} = req.body;
+    const{id} = req.params;
 
     try{
         const verified = jwt.verify(id,"secretkey")
         const userId = verified.id
         const hashPassword = await bcrypt.hash(password,10)
         await authModel.findByIdAndUpdate({_id:userId},{password:hashPassword})
+        res.json({status:true,msg:"updated"})
 
     }
     catch(e){
@@ -120,5 +124,12 @@ const Verify = async (req,res)=>{
     res.json({status:true,msg:"authorized"})
 }
 
+//Logout 
 
-export { Signup,Signin,ForgotPassword,ResetPassword,Verify}
+const Logout = async (req,res)=>{
+    res.clearCookie("accessToken")
+    res.json({staus:true,msg:"logout"})
+}
+
+
+export { Signup,Signin,ForgotPassword,ResetPassword,Verify,Logout}

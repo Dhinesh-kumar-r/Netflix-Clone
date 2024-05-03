@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Css/authentication.css"
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import ex from '../logo.png';
 
 function Login() {
   const[email,setemail] = useState("");
@@ -33,7 +34,7 @@ function Login() {
     <>
       <div className="container-1">
         <div className="navbar">
-          <img src="logo.png" alt="" height="70px" width="150px" class="logo" />
+          <img src={ex} alt="" height="70px" width="150px" class="logo" />
         </div>
         <div className="log-in-container">
           <div className="log-in">
@@ -48,12 +49,12 @@ function Login() {
               <h4>OR</h4>
               <p className="sign-in-code">Use a sign-in code</p>
               <br />
-              <p className="forgot">Forgot Password?</p>
+              <Link className="forgot-login" to={"/forgot"}>Forgot Password?</Link>
               <br />
             </div>
             <div className="content">
               <input type="checkbox" className="checkbox"></input>
-              <label>Remember me</label>
+              <label className="remember">Remember me</label>
                 <p className="">
                 <span className="signup-link-label">New to Netflix?</span>{" "}
                <Link to={"/"}>Signup Now</Link>
