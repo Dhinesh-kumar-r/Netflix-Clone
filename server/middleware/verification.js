@@ -5,7 +5,7 @@ const Verification = async(req,res,next)=>{
 
     try{
         if(!accessToken){
-            res.json({msg:false,msg:"token_expired"})
+            res.json({msg:false,msg:"token_expired"}) 
         }
         else{
             const token = jwt.verify(accessToken,"secretkey")

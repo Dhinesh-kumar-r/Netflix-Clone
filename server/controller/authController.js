@@ -26,7 +26,7 @@ const Signup = async(req,res)=>{
 
 //Login
 
-const Signin =async(req,res)=>{
+const Signin = async(req,res)=>{
     const {email,password} = req.body;
     try{
         const user = await authModel.findOne({email})
@@ -51,7 +51,18 @@ const Signin =async(req,res)=>{
     }
 }
 
+ //get userData 
+ const GetUserData = async(req,res)=>{
+    const user = await authModel.findById(user.Id);
+    if (!user) {
+        // Handle case where user is not found
+        res.json({ msg: "User not found" });
+    } else {
+        // Attach user details to the request object
+        req.user = user;
 
+    }
+ }
 //Forgot Password
 const ForgotPassword = async(req,res)=>{
     const{email} = req.body
@@ -132,4 +143,4 @@ const Logout = async (req,res)=>{
 }
 
 
-export { Signup,Signin,ForgotPassword,ResetPassword,Verify,Logout}
+export { Signup,Signin,ForgotPassword,ResetPassword,Verify,Logout,GetUserData}
