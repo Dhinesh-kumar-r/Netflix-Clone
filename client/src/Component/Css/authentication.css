@@ -241,7 +241,9 @@ a{
     text-decoration: none;
     color: white;
 }
-
+.forgot-email-reset value{
+    color: black;
+}
 .forgot-main-container{
     background-color:#e8eef1;
     width: 400px;

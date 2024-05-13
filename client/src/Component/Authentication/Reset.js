@@ -52,8 +52,8 @@ function Reset() {
                 
                 <form onSubmit={ResetHandler}>
                     <div>
-                        <label className='email-label'>Current Email</label>
-                        <input type='text' className='forgot-email reset' disabled ></input>
+                        <label className='email-label' >Current Email</label>
+                        <input type='text' className='forgot-email reset' value={"dhinesh"}disabled ></input>
                         <input type='password' className='reset' placeholder='New Password' onChange={PasswordHandler}></input>
                         <input type='password' className='reset' placeholder='Re-Type Password' onChange={HandleConfirmPassword}></input>
                         <div className='submit-box'>

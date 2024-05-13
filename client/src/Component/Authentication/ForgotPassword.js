@@ -5,6 +5,8 @@ import axios from 'axios';
 import ex from '../logo.png';
 
 
+
+
 function ForgotPassword() {
     const [email,setemail] =useState();
 
@@ -23,6 +25,7 @@ function ForgotPassword() {
     }
   return (
    <>
+  
         <div className ="forgot-container">
             <div className="navbar-forgot">
                 <ul>

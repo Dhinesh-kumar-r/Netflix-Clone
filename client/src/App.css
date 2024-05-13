@@ -1,0 +1,3 @@
+input::placeholder {
+    text-align: start; /* This aligns the placeholder text to the start position */
+}

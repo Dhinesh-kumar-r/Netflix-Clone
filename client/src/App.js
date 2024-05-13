@@ -1,4 +1,4 @@
-
+import "./App.css";
 import LandingPage from "./Component/IndexPage/LandingPage";
 import Login from "./Component/Authentication/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -14,14 +14,14 @@ import Reset from "./Component/Authentication/Reset";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path = "forgot" element={<ForgotPassword/>}/>
-        <Route path = "/reset/:token" element={<Reset/>}/>
+        <Route path = "/forgot"  element={<ForgotPassword/>}/>
+        <Route path = "/reset/:token"  element={<Reset />}/>
       </Routes>
     </BrowserRouter>
    
